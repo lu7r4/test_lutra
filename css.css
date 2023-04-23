@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, a:hover, a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    margin: 30px auto;
+    width: 1366px;
+}
+/* шапка с навигацией */
+.header {
+    width: 100%;
+    
+    padding-top: 18px;
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+.nav {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+
+}
+.nav__item-left-flex, .nav__item-right-flex {
+    display: flex;
+    padding-top: 3px;
+    position: relative;
+}
+.nav__item-left {
+    flex-basis: 560px;
+    position: relative;
+}
+.nav__item-left-bottom {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius:  0 0 15px 0;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.nav__item-right {
+    flex-basis: 568px;
+    position: relative;
+}
+.nav__item-right-bottom {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    right: 2px;
+    bottom: 0;
+    border-radius:  0 0 0 15px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+.nav__item-left .item__link:first-child {
+    padding-left: 130px;
+    letter-spacing: 2.5px;  
+}
+.nav__item-left .item__link:last-child {
+    padding-left: 35px;
+    letter-spacing: 2.5px;  
+}
+.nav__item-right .item__link:first-child {
+    padding-left: 180px;
+    letter-spacing: 2.5px;  
+}
+.nav__item-right .item__link:nth-child(2) {
+    padding-left: 35px;
+    letter-spacing: 2.5px;  
+}
+.nav__item-right .item__link:last-child {
+    padding-left: 35px;
+    letter-spacing: 2.5px;  
+}
+.nav__item-center {
+    flex-basis: 240px;
+    padding: 1px 24px 1px 24px;
+    font-size: 34px;
+    font-family: 'Inter', sans-serif;  
+    letter-spacing: 1.5px; 
+    position: relative;
+}
+.nav__item-center-top {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    left: -1px;
+    top: 0;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #fff;
+    border-bottom: none;
+}
+.item__link {
+    cursor: pointer;
+}
+/* верстка баннера */
+.banner {
+    position: relative;
+    width: 1366px;
+    height: 570px;
+    border: 1px solid #000;
+    background-color: #000;
+}
+/* текстовый кнтент баннера */
+.banner-content {
+    z-index: 3;
+    left: 50px;
+    top: 50px;
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.banner__text {
+    width: 800px;
+}
+.banner-span {
+    position: absolute;
+    top: 233px;
+    left: 30px;
+    width: 194px;
+    height: 56px;
+    background-color: #fff;
+    border-radius: 0 20px 20px 28px;
+}
+.banner-span:hover {
+    cursor: pointer;
+}
+.banner-span p {
+    color: #000;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.banner__text p:first-child {
+    position: absolute;
+    top: 20px;
+    left: 31px;
+    color: #ffffff9a;
+    letter-spacing: 1px;
+}
+.banner__text p:nth-child(2) {
+    position: absolute;
+    top: 46px;
+    left: 30px;
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 1px;
+
+}
+.banner__text p:last-child {
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+/* лого */
+.banner__logo {
+    position: absolute;
+    top: 300px;
+    left: 1178px;
+}
+/* главная картинка баннера */
+.banner__img {
+    z-index: 0;
+    top: -1px;
+    width: 1318px;
+    height: 516px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner__img img {
+    width: 1320px;
+    height: 520px;
+}
+.banner__bg-black {
+    position: absolute;
+}
+.banner__bg-main {
+    position: absolute;
+}
+/* обертка баннера, если этот код убрать, остается главная картинка */
+.banner__wrapper {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 1368px;
+    height: 570px;
+}
+/*"рамка"*/
+.banner__border {
+    margin-left: 23px;
+    width: 1321px;
+    height: 522px;
+    display: flex;
+}
+/*рамка разделена на 2 секции*/
+.border__left {
+    position: relative;
+    border-left: 1px solid #fff;
+    flex-basis: 72%;
+    border-radius: 31px 31px 31px 0;
+    border-right: none;
+}
+/*верхний левый угол*/
+.border__top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 29px;
+    background: transparent;
+}
+.border__top-left::after {
+    position: absolute;
+    content: '';
+    width: 29px;
+    height: 31px;
+    border-radius: 40px 0px 0px 0px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background-color: transparent;
+    left: 0px;
+    top: 0px;
+}
+/*див для вернего и нижнего бордера в центре левой секции*/
+.square-center {
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-right: none;
+    border-left: none;
+
+    height: 100%;
+    width: 95%;
+}
+/* верхний правый угол */
+.border__top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 29px;
+    background: #000;
+}
+.border__top-right::after {
+    position: absolute;
+    content: '';
+    width: 29px;
+    height: 31px;
+    border-radius: 0px 40px 0px 0px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    background-color: #000;
+    right: 2px;
+    top: 0px;
+}
+/* нижний правый угол */
+.border__bottom-right {
+    width:30px;
+    height:30px;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+/*нижний лквый угол*/
+.border__bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #fff;
+    background-color: #000;
+}
+.bottom-right__degree {
+    position:absolute;
+    width: 30px;
+    height: 32px;
+    background-color: transparent;
+    background-image: -webkit-radial-gradient(0% 0, circle, transparent 30px, black 0);
+}
+.bottom-right__degree::before {
+    position: absolute;
+    content: '';
+    border-radius: 0px 0px 31px 0px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 31px;
+    height: 30px;
+    right: -1px;
+    top: 0px;
+}
+
+.border__left .bottom-right__degree {
+    position:absolute;
+    width: 30px;
+    height: 32px;
+    background-color: transparent;
+    background-image: -webkit-radial-gradient(0% 0, circle, transparent 30px, black 0);
+}
+.border__left .bottom-right__degree::before {
+    position: absolute;
+    content: '';
+    border-radius: 0px 0px 31px 0px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 30px;
+    height: 31px;
+    right: 0px;
+    top: -2px;
+}
+/* правая секция */
+.border__right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 28%;
+}
+.border__right-item {
+    flex-grow: 1;
+    position: relative;
+}
+.right-item__bottom-right {
+    position: relative;
+}
+.border__right-item:first-child{
+    border-radius: 0 0 0 31px;
+    background-color: #000;
+    border: none;
+}
+
+.border__right-item:nth-child(2) {
+    flex-grow: 7;
+    border-radius: 0 31px 31px 0;
+    border-right: 1px solid #fff;
+
+}
+.border__right-item:last-child {
+    border-radius: 31px 0 0 0;
+    background-color: #000;
+}
+.border__right-item:first-child:hover, .border__right-item:last-child:hover {
+    cursor: pointer;
+}
+/* верхний правый угол */
+.right-item__top-right {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    background-color: #000;
+    right: 0px;
+    top: 0px;
+}
+.right-item__top-right::after {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 29px;
+    border-radius: 0px 31px 0px 0px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    background-color: #000;
+    right: -1px;
+    top: -1px;
+}
+/* нижний левый угол */
+.right-item__bottom-left {
+    position: absolute;
+    width: 27px;
+    height: 30px;
+    background-color: transparent;
+}
+.right-item__bottom-left::after {
+    position: absolute;
+    content: '';
+    width: 27px;
+    height: 29px;
+    border-radius: 0px 0px 0px 31px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-color: #000;
+    left: -3px;
+    bottom: -29px;
+}
+/* див для нижнего бордера в центре */
+.square-center_2 {
+    height: 100%;
+    width: 87%;
+    margin: 0 auto;
+    background: url(./Vector.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom: 1px solid #fff;
+}
+/*  верхний левый угол  */
+.right-item__bottom-left2 {
+    position: absolute;
+
+    width: 27px;
+    height: 27px;
+    
+    background-color: transparent;
+    left: 0;
+    top: 0px;
+}
+.right-item__bottom-left2::after {
+    position: absolute;
+    content: '';
+    width: 27px;
+    height: 29px;
+    border-radius: 31px 0px 0px 0px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+    background-color: #000;
+    left: -1px;
+    top: 0px;
+}
+/* див для вернего бордера в центре */
+.square-center_3 {
+    height: 100%;
+    width: 86%;
+    margin: 0 auto;
+    background: url(./Vector2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top: 1px solid #fff;
+    z-index: 2;
+}
+/* кнопки навигации */
+.banner_navigation {
+    z-index: 20;
+    position: absolute;
+    width: 168px;
+    height: 66px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 13px;
+}
+.circle {
+    position: absolute;
+    left: 50px;
+    width: 66px;
+    height: 66px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    
+}
+.circle img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.circle:hover {
+    cursor: pointer;
+}
+.left-right {
+    position: absolute;
+    top: 13px;
+    height: 42px;
+    width: 164px;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    width: 66px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 22px 0 0 22px;
+    background-color: #000;
+}
+.left img {
+    display: block;
+    padding: 10px 0 0 20px;
+}
+.left:hover {
+    cursor: pointer;
+    border-radius: 0 22px 0  22px;
+}
+.right {
+    width: 66px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 0 22px 22px 0;
+    background-color: #000;
+}
+.right img {
+    display: block;
+    padding: 10px 0 0 30px;
+}
+.right:hover {
+    cursor: pointer;
+    border-radius: 22px 0 22px 0;
+}
+
